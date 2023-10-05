@@ -1,0 +1,23 @@
+.see-more{
+    position: relative;
+    padding-left: 60px;
+    color: rgba(255, 255, 255, 0.6);
+
+    display: block;
+    transform: rotate(-90deg) translate(0%, 100%); // translate(0%, 100%) задаем что бы подвинуть в право на его ширину
+    transform-origin: left bottom; // свойство для повора на 90 градусов не по центру а с левой точки.
+
+    &::before{
+        content:'';
+
+        position: absolute;
+        left: 0;
+        top: calc(50% - 1.5px); // отступ с верху 50% - 1.5px // ширина 3px значит берем половину 1.5px;
+        
+        width: 38px;
+        height: 3px;
+        background-color: #fff;
+        opacity: 0.3;
+    
+    }
+}
